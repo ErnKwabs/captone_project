@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Messaging App</title>
+</head>
+<body>
+<!--    <div>-->
+<!--        <h1>List of Objects</h1>-->
+<!--    <ul>-->
+<!--&lt;!&ndash;        {% for message in messages %}&ndash;&gt;-->
+<!--&lt;!&ndash;            <li>{{ message.message }}</li>&ndash;&gt;-->
+<!--&lt;!&ndash;        {% endfor %}&ndash;&gt;-->
+<!--    </ul>-->
+<!--    </div>-->
+    <div>
+        <form method="POST">
+            <p> Send new Message</p>
+    {% csrf_token %}
+
+            <p>Recipient username: {{ form.recipient}}</p>
+            <p>Message: {{ form.message}}</p>
+    <input type="submit" value="Submit">
+</form>
+    </div>
+</body>
+</html>
